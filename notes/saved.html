@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/saved.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <title>Saved Notes</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <span class="note">Notepad</span>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="dark-nav">
+                <li class="dark">
+                    <span class="dark-toggler">Dark Mode:</span>
+                    <label class="switch">
+                        <input type="checkbox" name="theme">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li><a href="../notes/add.html" class="link">Add Notes</a></li>
+            </ul>
+        </nav>
+
+        <!-- <div class="search-icon">
+            <img src="../search.jpg" class="search-icon" alt="mic"/>
+        </div> -->
+
+        <div> 
+            <input type="text" class="search-input output"  id="search-input"  placeholder="Search notes here">
+        </div>
+        <div class="mic-active">
+            <img src="../assets/mic.png" id="mic-stand" alt="mic"/>
+        </div>
+        <div class="number-notes">
+            <p class="number">Number of notes:<span class="index-no"></span></p>
+        </div>
+        
+        <!-- modal section -->
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                 <div class="title"></div>
+                 <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+               
+            </div>
+
+            <div class="modal-time"></div>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="save-box">
+            
+        </div>
+    </div>
+    <script src="../functions/saved.js"></script>
+</body>
+</html>
+

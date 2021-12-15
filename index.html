@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bobate Olusegun">
+    <meta name="description" content="Jot down your unique ideas">
+    <meta property="og:title" content="Notes App">
+    <meta property="og:description" content="Jot down your unique ideas">
+    <meta property="og:site_name" content="Notes App">
+    <meta name="theme-color">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <title>Notes-App</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <meta name='mobile-web-app-capable' content='yes'>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NOTESPAD</h1>
+        </header>
+        <main>
+            <section>
+                <p>Jot down your unique ideas</p>
+            </section>
+            <button class="main-button"><a href="notes/addPage.html" class="main">Get Started</a></button>
+        </main>
+       
+    </div>
+    <script>
+        let loadButton = document.querySelector('.main');
+        let load = localStorage.getItem('load');
+        
+        const loadPage = () => {
+            localStorage.setItem('load','Page already visited');
+        }
+
+        const notLoaded = () => {
+            window.location.assign('notes/saved.html');
+        }
+        
+        if (load === 'Page already visited' ) {
+            window.location.assign('notes/saved.html'); 
+        }
+
+        loadButton.addEventListener("click", () => {
+            load = localStorage.getItem('load');
+            if (load === 'Page already visited' ) {
+                notLoaded(); 
+            } else {
+                loadPage();
+            }
+        })
+    </script>
+</body>
+</html>
+
+ 

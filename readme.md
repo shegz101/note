@@ -1,0 +1,1 @@
+A web application that helps you create, save, delete and edit notes.

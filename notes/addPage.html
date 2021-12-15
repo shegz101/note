@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/addPage.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <title>initial page</title>
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li class="note-flex">
+                  <span class="note">Note</span>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="dark-nav">
+                <li class="dark">
+                    <span class="dark-text">Dark Mode:</span>
+                    <label class="switch">
+                        <input type="checkbox" name="theme">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li><a href="../notes/add.html" class="link">Add Notes</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <p class="para-intro">looks like you have not saved any note :(</p>
+                <a href="../notes/add.html" class="note-link"><center>Add Note</center></a>
+            </section>
+        </main>
+    </div>
+    <script>
+    
+    let darkModeToggle = document.querySelector(".switch");
+    let theme = localStorage.getItem('data-theme');
+
+    const changeThemeToDark = () => {
+       document.documentElement.setAttribute("data-theme", "dark");
+       localStorage.setItem("data-theme","dark");
+    }
+
+    const changeThemeToLight = () => {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("data-theme","light");
+    }
+
+    if(theme === "dark") {
+        changeThemeToLight();
+    } 
+
+    darkModeToggle.addEventListener("change", () => {
+        theme = localStorage.getItem('data-theme');
+        if(theme === "dark") {
+            changeThemeToLight();
+        } else {
+            changeThemeToDark();
+        }
+    });
+    </script>
+    
+</body>
+</html>
+
+    
+<!--  -->

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/add.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <title>Add Page</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <ul>
+                <li class="note-flex">
+                    <span></span>
+                    <span class="note">Note</span>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="dark-nav">
+                <li class="dark">
+                    <span class="dark-toggler">Dark Mode:</span>
+                    <label class="switch">
+                        <input type="checkbox" name="theme">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li><a href="../notes/saved.html" class="link">Saved Notes</a></li>
+            </ul>
+        </nav><br>
+        <p class="date"></p>
+        <div class="text-container">
+            <div>
+                <form>
+                    <textarea placeholder="Title" class="output text-title"></textarea>
+                </form>
+            </div>
+            <div class="mic-active">
+                <img src="../assets/mic.png" id="mic-stand" alt="mic"/>
+            </div>
+            <br>
+            
+            <div class="text-content">
+                <form>
+                    <textarea placeholder="Note something down" class="input text-note"></textarea>
+                </form>
+            </div>
+            
+            <br>
+        </div><br><br>
+        <div class="button-style">
+            <button  id="save-button" class="action-button save-button">Save</button>
+            <button id="clear-button" class="action-button clear-button">Clear</button>
+        </div>
+
+        <div class="save-box">
+
+        </div>
+    </div>
+    
+    <script src="../functions/add.js"> </script>
+    <script src="../functions/saved.js"></script>
+</body>
+</html>

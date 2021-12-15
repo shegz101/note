@@ -1,0 +1,152 @@
+
+
+/*****************
+***Color********/
+:root {
+    --color-light: rgb(241, 233, 241);
+    --color-dark: #222831;
+    --color-text: black;
+    --dark-toggle:black;
+    --para-color:black;
+    --dark-background:white;
+  
+    --background: var(--color-light);
+    --foreground: var(--color-dark);
+}
+
+:root[data-theme="dark"] {
+    --color-light: rgb(241, 233, 241);
+    --color-dark: #222831;
+    --color-text: white;
+    --dark-toggle:white;
+    --para-color:white;
+    --dark-background:rgb(32, 31, 31);
+  
+    --background: var(--color-dark);
+    --foreground: var(--color-light);
+}
+
+
+body {
+    box-sizing: border-box;
+    background: var(--background);
+    color: var(--foreground);
+    height: 40rem;
+    width: 99%;
+    color: black;
+}
+
+
+::placeholder {
+    font-size: 1.5rem;
+}
+
+.note-flex{
+    list-style-type: none;
+}
+
+.note {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:var(--color-text);
+}
+
+.dark-text {
+    color:var(--dark-toggle) ;
+}
+
+.para-intro {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+    color: var(--para-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 30px;
+    padding-right: 3rem;
+}
+
+.dark{
+    font-size: 30px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: #eee;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color:rgba(75, 68, 68, 0.308);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.note-link {
+    text-align: center;
+    color:var(--para-color);
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.dark-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark-background);
+}

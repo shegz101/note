@@ -1,0 +1,332 @@
+
+:root {
+    --color-light: rgb(241, 233, 241);
+    --color-dark: #222831;
+    --color-text: black;
+    --color-button:white;
+    --search-color:black;
+    --dark-toggle:black;
+    --save-color:rgb(230, 225, 220);
+    --dark-background:white;
+    --text-color:white;
+    --button-background:rgb(194, 161, 194);
+  
+    --background: var(--color-light);
+    --foreground: var(--color-dark);
+}
+
+:root[data-theme="dark"] {
+    --color-light: rgb(241, 233, 241);
+    --color-dark: #222831;
+    --color-text: white;
+    --color-button:black;
+    --search-color:white;
+    --dark-toggle:white;
+    --save-color:rgb(65, 62, 59);
+    --dark-background:rgb(32, 31, 31);
+    --text-color:rgb(32, 31, 31);
+    --button-background:white;
+  
+    --background: var(--color-dark);
+    --foreground: var(--color-light);
+}
+
+body {
+    box-sizing: border-box;
+    height: 40rem;
+    width: 99%;
+    
+}
+
+html {
+    box-sizing: border-box;
+    background: var(--background);
+    color: var(--foreground);
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.note {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.dark-toggler {
+    color:var(--dark-toggle) ;
+}
+
+.dark-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--dark-background);
+    /* box-shadow: 10px 10px 15px rgb(192, 183, 183), -10px -10px 15px white;
+    background-color: rgb(230, 225, 220); */
+}
+
+.dark{
+    font-size: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: blue;
+    font-size: 30px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color:rgba(75, 68, 68, 0.308);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.number {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+::placeholder {
+    font-size: 1.2rem;
+}
+
+.search-input {
+    width: 100%;
+    height: 2rem;
+    color: var(--search-color);
+    background-color: var(--text-color);
+    /* background-color:rgb(230, 225, 220);
+    box-shadow: 10px 10px 15px rgb(192, 183, 183), -10px -10px 15px white; */
+    outline: none;
+    text-decoration: none;
+    border: 1px solid #eee;
+    border-radius: 12px 12px;
+}
+
+.mic-active {
+    margin-left: 80rem;
+    margin-top: -2rem;
+    cursor: pointer;
+}
+
+.save-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.saved-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* number of lines to show */
+     line-height: 1.5; /* fallback */
+     max-height: 1.5*1; 
+}
+
+.saved-inputs {
+    display: block;
+    border: transparent;
+    border-radius: 15px 15px;
+    /* background-color: white; */
+    outline: none;
+    width:250px;
+    padding: 0.5em 1.5em;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    /* box-shadow: 10px 10px 15px rgb(192, 183, 183), -10px -10px 15px white; */
+    background-color:var(--save-color);
+}
+
+.note-index {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.saved-title {
+    font-size: 1.5rem;
+    font-weight: 1000;
+}
+
+.delete-button {
+    color: var(--color-button);
+    height: 40px;
+    width: 80px;
+    background-color:var(--button-background);
+    border-radius: 17px 17px;
+    border: 1px solid #eee;
+    outline: none;
+    font-size: 1rem;
+    margin-left: 1.5em;
+}
+
+.view-button  {
+    color:  var(--color-button);
+    height: 40px;
+    width: 80px;
+    background-color: var(--button-background);
+    border-radius: 17px 17px;
+    border: 1px solid #eee;
+    outline: none;
+    font-size: 1rem;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.display {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.title {
+    color: black;
+}
+.modal-body {
+    color: black;
+}
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.display {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*********Media Query For Mobile*************/
+@media screen and (max-width:600px) {
+    .search-input {
+        width: 97%;
+    }
+
+    .mic-active {
+        margin-top: -2rem;
+        margin-left: 28rem;
+    }
+
+    .link {
+        margin-right: 2rem;
+    }
+
+    .dark-nav {
+        width: 90%;
+    }
+
+    .saved-inputs {
+        width:380px;
+        height: 12rem;
+    }
+
+    .delete-button {
+        width: 120px;
+        font-size: 1.5rem;
+    }
+
+    .view-button {
+        width: 120px;
+        font-size: 1.5rem;
+    }
+}
