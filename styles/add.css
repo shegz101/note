@@ -281,11 +281,8 @@ input:checked + .slider:before {
         margin-right: 2rem;
     }
     
-    .dark {
-        font-size: 20px;
-    }
     .dark-nav {
-        width: 100%;
+        width: 90%;
     }
 }
 
