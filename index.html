@@ -25,36 +25,36 @@
         </header>
         <main>
             <section>
-                <p>Jot down your unique ideas</p>
+                <p>Jot down your <span>unique ideas</span></p>
             </section>
             <button class="main-button"><a href="notes/addPage.html" class="main">Get Started</a></button>
         </main>
        
     </div>
     <script>
-        let loadButton = document.querySelector('.main');
-        let load = localStorage.getItem('load');
+        // let loadButton = document.querySelector('.main');
+        // let load = localStorage.getItem('load');
         
-        const loadPage = () => {
-            localStorage.setItem('load','Page already visited');
-        }
+        // const loadPage = () => {
+        //     localStorage.setItem('load','Page already visited');
+        // }
 
-        const notLoaded = () => {
-            window.location.assign('notes/saved.html');
-        }
+        // const notLoaded = () => {
+        //     window.location.assign('notes/saved.html');
+        // }
         
-        if (load === 'Page already visited' ) {
-            window.location.assign('notes/saved.html'); 
-        }
+        // if (load === 'Page already visited' ) {
+        //     window.location.assign('notes/saved.html'); 
+        // }
 
-        loadButton.addEventListener("click", () => {
-            load = localStorage.getItem('load');
-            if (load === 'Page already visited' ) {
-                notLoaded(); 
-            } else {
-                loadPage();
-            }
-        })
+        // loadButton.addEventListener("click", () => {
+        //     load = localStorage.getItem('load');
+        //     if (load === 'Page already visited' ) {
+        //         notLoaded(); 
+        //     } else {
+        //         loadPage();
+        //     }
+        // })
     </script>
 </body>
 </html>

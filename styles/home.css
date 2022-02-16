@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
 
+html {
+  font-size: 15px;
+}
+
 body{
   background-repeat: no-repeat;
   background-color: plum;
@@ -15,25 +19,30 @@ body{
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
+  padding-top: 3rem;
 }
 
 p {
-  font-size: 3rem;
+  font-size: 5rem;
+  padding-top: 3rem;
 }
 
 .main-button {
   text-decoration: none;
   outline: none;
-  border: transparent;
   border-radius: 3rem;
-  width:15rem;
+  width:13rem;
   height: 4rem;
   background-color: rgb(179, 135, 135);
+  text-decoration: none;
+  border: transparent;
 }
 
 .main-button:hover {
   opacity: 0.5;
+  background-color: transparent;
+  border-color:1px solid red;
 }
 
 .main {
@@ -44,3 +53,74 @@ p {
   font-size: 1.5rem;
 }
 
+/* First mobile view */
+@media only screen and (min-width:0px) and (max-width:320px) {
+  h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .main-button {
+    margin-top: 50px;
+    margin-bottom:40px;
+    width:13rem;
+    height: 3rem;
+    text-decoration: none;
+    border: transparent;
+  }
+}
+
+/* Second mobile view */
+@media only screen and (min-width:321px) and (max-width:375px) {
+  h1 {
+    font-size: 2.8rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .main-button {
+    margin-top: 50px;
+    margin-bottom:40px;
+    width:13rem;
+    height: 3rem;
+    text-decoration: none;
+    border: transparent;
+  }
+}
+
+/* Third mobile view */
+@media only screen and (min-width:376px) and (max-width:425px) {
+  h1 {
+    font-size: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 4rem;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .main-button {
+    margin-top: 50px;
+    margin-bottom:40px;
+    width:13rem;
+    height: 3rem;
+    text-decoration: none;
+    border: transparent;
+  }
+}

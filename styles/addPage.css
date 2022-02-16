@@ -52,7 +52,8 @@ body {
 }
 
 .dark-text {
-    color:var(--dark-toggle) ;
+    color:var(--dark-toggle);
+    font-size: 30px;
 }
 
 .para-intro {
@@ -69,9 +70,10 @@ body {
     padding-right: 3rem;
 }
 
-.dark{
-    font-size: 30px;
-}
+/* .dark{
+    display: flex;
+    flex-direction: row;
+} */
 
 .dark-mode {
     background-color: black;
@@ -149,4 +151,67 @@ input:checked + .slider:before {
     display: flex;
     justify-content: space-between;
     background-color: var(--dark-background);
+}
+
+/*********Media Query For Mobile*************/
+/*********Media Query For Mobile*************/
+/*********Media Query For Mobile*************/
+
+/* First mobile view */
+@media only screen and (min-width:0px) and (max-width:320px) {
+    .link {
+        text-decoration: none;
+        font-size: 23px;
+        height: 50px;
+        padding-right: 1rem;
+    }
+    
+    .dark-text {
+        /* padding-top: 50px; */
+        font-size: 20px;
+    }
+
+    .note-link {
+        text-align: center;
+        color:var(--para-color);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+        
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 24px;
+        width: 23px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .dark-nav {
+        list-style-type: none;
+        display: flex;
+        height: 25px;
+        background-color: var(--dark-background);
+    }
+}
+
+/* Second mobile view */
+@media only screen and (min-width:321px) and (max-width:375px) {
+
+}
+
+/* Third mobile view */
+@media only screen and (min-width:376px) and (max-width:425px) {
+
 }

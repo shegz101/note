@@ -258,7 +258,11 @@ input:checked + .slider:before {
 }
 
 /*********Media Query For Mobile*************/
-@media screen and (max-width:600px) {
+/*********Media Query For Mobile*************/
+/*********Media Query For Mobile*************/
+
+/* First mobile view */
+@media only screen and (min-width:0px) and (max-width:320px) {
     .text-title {
         width: 97%;
     }
@@ -282,8 +286,16 @@ input:checked + .slider:before {
     }
     
     .dark-nav {
-        width: 90%;
+        width: 60%;
     }
 }
 
+/* Second mobile view */
+@media only screen and (min-width:321px) and (max-width:375px) {
 
+}
+
+/* Third mobile view */
+@media only screen and (min-width:376px) and (max-width:425px) {
+
+}
